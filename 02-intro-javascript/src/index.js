@@ -4,14 +4,17 @@ const persona = {
     edad: 45,
     direccion: {
         ciudad: 'New York',
-        zip: 9873652,
-        lat: 145.46584,
-        lng: 215.54645,
+        zip: 5664965,
+        lat: 14.235,
+        lng: 546.549,
     }
 };
 
+// console.table(persona);
+
+
+const persona2 = { ...persona }
+persona2.nombre = 'Peter';
+
 console.log(persona);
-
-const persona2 = { ...persona };
-
-console.log(persona2)
+console.log(persona2);
