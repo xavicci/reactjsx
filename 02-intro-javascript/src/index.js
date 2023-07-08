@@ -1,30 +1,16 @@
-const personajes = ['Gokku', 'Vegeta', 'Bulma'];
+import { heroes } from "./data/heroes";
 
-console.log(personajes[0]);
-console.log(personajes[1]);
-console.log(personajes[2]);
+console.log(heroes);
 
-
-const [gokus, , p3] = personajes;
-console.log(gokus, p3)
-
-const retornaArreglo = () => ['ABC', 123];
-
-const arr = retornaArreglo();
-console.log(arr)
-
-
-const [letras, numeros] = retornaArreglo();
-console.log(letras, numeros)
-
-const usevState = (valor) => {
-    return [valor, () => { console.log("HOLA MUNDO") }];
+const getHeroeById = (id) => {
+    return heroes.find(element => element.id === id ? true : false);
 }
 
-const hola = usevState('GOKU');
+console.log(getHeroeById(5));
 
-const [nombre, setNombre] = hola;
 
-console.log(nombre, setNombre)
+const getHeroeByOwner = (owner) => {
+    return heroes.filter(element => element.owner === owner ? true : false);
+}
 
-setNombre();
+console.log(getHeroeByOwner('DC'));
