@@ -1,19 +1,20 @@
+import PropTypes from 'prop-types';
 
-const funct_test = (nombre) => nombre;
+export const FirstApp = ({
+    title, subTitle
+}) => {
 
-const newMessage = {
-    message: 'Hola mundito',
-    title: 'Saludo'
-}
-
-export const FirstApp = () => {
     return (
         <>
             {/* <code> {JSON.stringify(newMessage)}</code> */}
-            <h1>{funct_test("BelenXF")}</h1>
-            <h2>Hola! soy Xavier Flores C</h2>
+            <h1>{title} </h1>
+            <h2>{subTitle}</h2>
         </>
     )
 }
 
 
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.number,
+}
