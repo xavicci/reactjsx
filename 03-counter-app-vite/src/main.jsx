@@ -7,6 +7,6 @@ import { FirstApp } from './FirstApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <FirstApp title="hola soy Xavier" subTitle={123} />
+        <FirstApp />
     </React.StrictMode>
 );
