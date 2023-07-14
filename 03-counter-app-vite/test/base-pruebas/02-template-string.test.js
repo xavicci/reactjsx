@@ -5,7 +5,7 @@ describe('Pruebas en 02-template-string', () => {
 
         const name = 'Fernando';
         const message = getSaludo(name);
-
+        // toBe usado para comparar cadena de caracteres
         expect(message).toBe(`Hola ${name}`)
     })
 
