@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Message } from './Message';
 
 export const SimpleForm = () => {
 
@@ -18,46 +19,49 @@ export const SimpleForm = () => {
 
     // useEffect es usado para disparar efecto secundarios
     useEffect(() => {
-        console.log("useEffect Changed!")
+        // console.log("useEffect Changed!")
     }, []);
 
     useEffect(() => {
-        console.log("formstate changed!")
+        // console.log("formstate changed!")
     }, [formState]);
 
     useEffect(() => {
-        console.log("username changed!")
+        // console.log("username changed!")
     }, [username]);
 
     useEffect(() => {
-        console.log("email changed!")
+        // console.log("email changed!")
     }, [email]);
 
     return (
-        <div>
-            <>
-                <h1>Simple Form</h1>
-                <hr />
 
-                <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Ingrese nombre"
-                    name="username"
-                    value={username}
-                    onChange={onInputChange}
-                />
+        <>
+            <h1>Simple Form</h1>
+            <hr />
 
-                <input
-                    type="email"
-                    className="form-control mt-2"
-                    placeholder="correo@mail.com"
-                    name="email"
-                    value={email}
-                    onChange={onInputChange}
-                />
-            </>
-        </div>
+            <input
+                type="text"
+                className="form-control"
+                placeholder="Ingrese nombre"
+                name="username"
+                value={username}
+                onChange={onInputChange}
+            />
+
+            <input
+                type="email"
+                className="form-control mt-2"
+                placeholder="correo@mail.com"
+                name="email"
+                value={email}
+                onChange={onInputChange}
+            />
+
+            {username === 'strider2' && <Message />}
+
+        </>
+
     )
 }
 
