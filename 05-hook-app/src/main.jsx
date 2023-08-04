@@ -13,11 +13,13 @@ import ReactDOM from 'react-dom/client';
 // import { MemoHook } from './06-memos/MemoHook.jsx';
 // import { CallbackHook } from './07-useCallback/CallbackHook.jsx';
 import { Padre } from './07-tarea-memo/Padre.jsx';
+import './08-useReducer/intro-reducer'
 
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <Padre />
-  // </React.StrictMode>
-)
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   // <React.StrictMode>
+//   <Padre />
+
+//   // </React.StrictMode>
+// )
