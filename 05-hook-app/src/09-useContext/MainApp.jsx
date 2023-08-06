@@ -1,8 +1,11 @@
 
 export const MainApp = () => {
-    return (
-        <div>
 
-        </div>
+    
+    return (
+       <>
+       <h1>MainApp</h1>
+       <hr />
+       </>
     )
 }
