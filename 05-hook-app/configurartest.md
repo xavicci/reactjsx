@@ -7,7 +7,7 @@ Actualizar los scripts del package.json
 "scripts: {
   ...
   "test": "jest --watchAll"
-Crear la configuración de babel babel.config.js
+Crear la configuración de babel babel.config.cjs
 module.exports = {
     presets: [
         [ '@babel/preset-env', { targets: { esmodules: true } } ],
@@ -15,7 +15,7 @@ module.exports = {
     ],
 };
 Opcional, pero eventualmente necesario, crear Jest config y setup:
-jest.config.js
+jest.config.cjs
 
 module.exports = {
     testEnvironment: 'jest-environment-jsdom',
