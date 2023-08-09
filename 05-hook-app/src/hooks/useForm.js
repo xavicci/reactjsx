@@ -4,7 +4,7 @@ export const useForm = (initialForm = {}) => {
 
     const [formState, setFormState] = useState(initialForm);
 
-    const { username, email, password } = formState;
+    // const { username, email, password } = formState;
 
     const onInputChange = ({ target }) => {
         const { name, value } = target;
