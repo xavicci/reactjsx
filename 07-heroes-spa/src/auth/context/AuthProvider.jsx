@@ -1,6 +1,6 @@
-import { useReducer } from "react"
-import { AuthContext } from "./AuthContext"
-import { authReducer } from "./authReducer"
+import { useReducer } from 'react'
+import { AuthContext } from './AuthContext'
+import { authReducer } from './authReducer'
 
 const initialState = {
     logged: false,
