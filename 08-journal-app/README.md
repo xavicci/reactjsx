@@ -10,3 +10,6 @@ Currently, two official plugins are available:
 
 
 yarn add react-router-dom@6
+
+yarn add @mui/material @emotion/react @emotion/styled
+yarn add @mui/icons-material
