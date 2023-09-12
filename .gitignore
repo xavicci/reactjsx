@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/PLATZI/curso-react-intro/node_modules
 /.pnp
 .pnp.js
 
