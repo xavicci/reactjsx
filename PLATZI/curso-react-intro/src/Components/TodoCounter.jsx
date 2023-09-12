@@ -1,7 +1,8 @@
-export const TodoCounter = () => {
+export const TodoCounter = ({completed, total}) => {
+    
     return (
-        <h1>
-            Has completado 3 de 5 TODOS
+        <h1 style={{color:"red"}}>
+            Has completado {completed} de {total} TODOS
         </h1>
     );
 }
