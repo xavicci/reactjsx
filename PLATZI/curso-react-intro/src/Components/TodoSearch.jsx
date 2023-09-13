@@ -15,6 +15,7 @@ export const TodoSearch = () => {
                 console.log(event);
                 console.log(event.target);
                 console.log(event.target.value);
+                console.log(event.target.value);
             }}  
         />
     );
