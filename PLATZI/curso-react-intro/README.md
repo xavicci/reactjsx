@@ -10,7 +10,7 @@ Como inicializar un proyecto con vite con las depedencias necesarias?
   		npm run dev
 
 ***************************************************************************
-npm create vite@latest NOMBRETUPROYECTO -- --template vanilla
+npm create vite@latest APRENDEREACT -- --template react-swc
         cd NOMBRETUPROYECTO 
   		npm install
   		npm run dev
