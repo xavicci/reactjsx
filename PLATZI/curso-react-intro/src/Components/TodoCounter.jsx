@@ -1,8 +1,11 @@
-export const TodoCounter = ({completed, total}) => {
-    
+import './styles/TodoCounter.css';
+
+export const TodoCounter = ({ completed, total }) => {
+
     return (
-        <h1 style={{color:"red"}}>
-            Has completado {completed} de {total} TODOS
+        <h1 className='TodoCounter'>
+            Has completado <span>{completed} </span>
+            de <span>{total}</span> TODOS
         </h1>
     );
 }
