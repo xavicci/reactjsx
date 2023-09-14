@@ -13,7 +13,10 @@ export const TodoItem = ({ actividad, completed, onComplete,onDelete }) => {
                 V
             </span> */}
 
-            <CompleteIcon />
+            <CompleteIcon 
+            completed={completed}
+            onComplete={onComplete}
+            />
 
             <p className={`TodoItem-p 
             ${completed ? "TodoItem-p--complete" : ""}`}>
@@ -26,7 +29,9 @@ export const TodoItem = ({ actividad, completed, onComplete,onDelete }) => {
                 X
             </span> */}
 
-            <DeleteIcon />
+            <DeleteIcon
+            onDelete={onDelete}
+            />
             
         </li>
     );
