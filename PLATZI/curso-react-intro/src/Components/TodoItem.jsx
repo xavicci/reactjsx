@@ -1,9 +1,19 @@
-export const TodoItem = () => {
+import './styles/TodoItem.css';
+
+export const TodoItem = ({ actividad, completed }) => {
+
     return (
-        <li>
-            <span>V</span>
-            <p>LLorar con la llorona</p>
-            <span>X</span>
+        <li className="TodoItem">
+            <span className={`Icon Icon-check ${completed ? "Icon-check--active" : ""}`}>
+                V
+            </span>
+            <p className={`TodoItem-p 
+            ${completed ? "TodoItem-p--complete" : ""}`}>
+                {actividad}
+            </p>
+            <span className="Icon Icon-delete">
+                X
+            </span>
         </li>
     );
 }

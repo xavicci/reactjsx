@@ -1,5 +1,10 @@
+import './styles/CreateTodoButton.css';
+
 export const CreateTodoButton = () => {
     return (
-        <button> Click Me</button>
+        <button 
+        className='CreateTodoButton'
+        onClick={()=>console.log("clickeado")}
+        >+</button>
     );
 }
