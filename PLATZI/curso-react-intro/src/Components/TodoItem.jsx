@@ -1,8 +1,8 @@
 import './styles/TodoItem.css';
-import {CompleteIcon} from '../Icons/CompleteIcon';
-import {DeleteIcon} from '../Icons/DeleteIcon';
+import { CompleteIcon } from '../Icons/CompleteIcon';
+import { DeleteIcon } from '../Icons/DeleteIcon';
 
-export const TodoItem = ({ actividad, completed, onComplete,onDelete }) => {
+export const TodoItem = ({ actividad, completed, onComplete, onDelete }) => {
 
     return (
         <li className="TodoItem">
@@ -13,7 +13,10 @@ export const TodoItem = ({ actividad, completed, onComplete,onDelete }) => {
                 V
             </span> */}
 
-            <CompleteIcon />
+            <CompleteIcon
+                completed={completed}
+                onComplete={onComplete}
+            />
 
             <p className={`TodoItem-p 
             ${completed ? "TodoItem-p--complete" : ""}`}>
@@ -26,8 +29,10 @@ export const TodoItem = ({ actividad, completed, onComplete,onDelete }) => {
                 X
             </span> */}
 
-            <DeleteIcon />
-            
+            <DeleteIcon
+                onDelete={onDelete}
+            />
+
         </li>
     );
 }

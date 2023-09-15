@@ -42,10 +42,23 @@ toLowerCase() convierte una cadena de texto en minúsculas, utilizando las regla
 
 Por otro lado, toLocaleLowerCase() también convierte una cadena de texto en minúsculas, pero utiliza las reglas de conversión específicas del idioma y la ubicación (localización) en la que se está ejecutando el código. Esto significa que, en función de la localización, algunos caracteres con acentos o diacríticos (como la letra “á” en español) pueden ser convertidos a su equivalente en minúsculas, mientras que otros caracteres pueden permanecer sin cambios.
 
+******************************************************
+🔵Evita acceder al localStorage dentro del componente
+Acceder a los valores del localStorage dentro del componente es muy pesado en cuanto al rendimiento, ya que se ejecuta sincrónicamente en cada re-renderizado del componente. En su lugar, puedes leerlo utilizando un callback que retorne el valor inicial del useState, esto permitirá acceder a la información una sola vez al momento que se crea el componente, esto por la definición de useState.
 
+******************************************************
+🔵Evita las dependencias dentro de tus componentes con Custom Hooks
+Cuando estás utilizando paquetes dentro de React, por ejemplo, el paquete inventado QueryPlatzi, evita importarlo en cada componente, a menos que sea necesario.
 
-
-
+En su lugar, crea un custom Hook para abstraer la funcionalidad del paquete.
+******************************************************
+******************************************************
+******************************************************
+******************************************************
+******************************************************
+******************************************************
+******************************************************
+******************************************************
 
 
 
