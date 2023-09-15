@@ -30,9 +30,9 @@ export const TodoItem = ({ actividad, completed, onComplete, onDelete }) => {
             </span> */}
 
             <DeleteIcon
-                onDelete={onDelete}
+            onDelete={onDelete}
             />
-
+            
         </li>
     );
 }
