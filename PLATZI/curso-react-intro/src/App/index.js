@@ -26,6 +26,12 @@ function App() {
 
   const totalTodos = todos.length;
 
+  console.log('Log 1');
+  console.log('Log 2');
+  console.log('Log 3');
+  console.log('Log 4');
+  console.log('Log 5');
+
   const searchedTodos = todos.filter(
     (todo) => (todo.text.toLowerCase().includes(searchValue.toLowerCase()))
   );
