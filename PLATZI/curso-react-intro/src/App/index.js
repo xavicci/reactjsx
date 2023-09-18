@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { CreateTodoButton, TodoSearch, TodoList, TodoItem, TodoCounter } from '../Components';
 import { useLocalStorage } from './useLocalStorage';
 
+// localStorage.removeItem('TODOS_V1');
 
 // const defaultTodos = [
 //   { id: 1, text: 'Ir a trabajar', completed: true },
@@ -12,12 +13,15 @@ import { useLocalStorage } from './useLocalStorage';
 //   { id: 5, text: 'Estudiar', completed: false },
 // ]
 
-// localStorage.setItem('TODOS_V1', defaultTodos);
-// localStorage.removeItem('TODOS_V1');
+// localStorage.setItem('TODOS_V1', JSON.stringify( defaultTodos));
 
 function App() {
 
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+  const {
+    item:todos,
+     saveItem:saveTodos,
+     loading,
+     error} = useLocalStorage('TODOS_V1', []);
 
   const [searchValue, setSearchValue] = useState('');
 
@@ -25,13 +29,15 @@ function App() {
   const completedTodos = todos.filter(todo => !!todo.completed).length;
 
   const totalTodos = todos.length;
-
-  console.log('Log 1');
-  console.log('Log 2');
-  console.log('Log 3');
-  console.log('Log 4');
-  console.log('Log 5');
-
+  
+  // useEffect(() => {
+  //   console.log('Log 2');
+  // });
+  
+  // useEffect(() => {
+  //   console.log('Log 2');
+  // },[]);
+  
   const searchedTodos = todos.filter(
     (todo) => (todo.text.toLowerCase().includes(searchValue.toLowerCase()))
   );
@@ -63,7 +69,11 @@ function App() {
       />
 
       <TodoList>
-        {/* console.log(object) */}
+        {loading && <p> Estamos cargando...</p>}
+        {error && <p> Hubo un error...</p>}
+        {(!loading && searchedTodos.length==0) && <p> Crea tu primer TODO!!</p>}
+
+
         {searchedTodos.map(({ id, text, completed }) => (
           <TodoItem
             key={id}
