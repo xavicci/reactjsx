@@ -95,7 +95,7 @@ Boolean (function());
 Boolean (true);
 //true
 
-//**\_\_\_**OPERADORES****\_\_****
+//**\_\_\_**OPERADORES\***\*\_\_\*\***
 // Operadores Matematicos
 3 + 2
 //5
@@ -126,7 +126,7 @@ var edad = 40
 edad ++ // es la variable + 1
 edad += 2 // es variable + 2
 
-//**\_\_** CONDICIONALES****\_****
+//**\_\_** CONDICIONALES\***\*\_\*\***
 // \_**_if_**
 if () {
 }
@@ -157,7 +157,7 @@ default:
 console.log("No soy nada")
 }
 
-//****\_\_****ARRAYS****\_****
+//\***\*\_\_\*\***ARRAYS\***\*\_\*\***
 var frutas = ["manzana", "plátano", "cereza", "fresa"];
 console.log(frutas.length) //imprime el numero de elementos del array
 
@@ -171,7 +171,7 @@ var borrarFruta = frutas.shift("uvas"); // elimina el primer elemento del array
 
 var polisicion =frutas.indexOf ("cereza"); //busca la posicion del elemento dentro del array
 
-//****\_\_\_****LOOPS FOR & FOR...OF****\_\_****
+//\***\*\_\_\_\*\***LOOPS FOR & FOR...OF\***\*\_\_\*\***
 var estudiantes = ["Maria","Sergio", "Rosa", "Daniel"];
 
 function saludarEstudiantes(estudiante) {
@@ -190,7 +190,7 @@ for (var estudiante of estudiantes){
 saludarEstudiantes(estudiante);
 }
 
-//****\_\_****LOOPS WHILE****\_\_\_****
+//\***\*\_\_\*\***LOOPS WHILE\***\*\_\_\_\*\***
 var estudiantes = ["Maria", "Sergio", "Rosa", "Daniel"]
 function saludarEstudiantes(estudiante){
 console.log(`Hola, ${estudiante}`);
@@ -201,7 +201,7 @@ var estudiante = estudiantes.shift();
 saludarEstudiantes(estudiante)
 }
 
-//******\_\_******OBJECTS******\_\_******
+//**\*\***\_\_**\*\***OBJECTS**\*\***\_\_**\*\***
 var miAuto = {
 marca: "Toyota",
 modelo: "Corolla",
@@ -234,7 +234,7 @@ var AutoNuevo3 = new auto("Toyota", "Corolla", 2020);
 
 autoNuevo2 //imprime los valores del objeto
 
-//****\_\_****METODOS DE RECORRIDOS DE ARRAYS****\_****
+//\***\*\_\_\*\***METODOS DE RECORRIDOS DE ARRAYS\***\*\_\*\***
 var articulos = [
 {nombre:"Bici", costo: "3000"},
 {nombre:"Tv", costo:"2500"},
@@ -245,38 +245,38 @@ var articulos = [
 {nombre:"Audifonos", costo:"1700"},
 ];
 
-//**\_\_\_\_**MEDOTO 1****\_\_****FILTRA ELEMENTOS ESPECIALMENTE
+//**\_\_\_\_**MEDOTO 1\***\*\_\_\*\***FILTRA ELEMENTOS ESPECIALMENTE
 var articulosFiltrados = articulos.filter(function(articulo){
 return articulo.costo <=500
 });
 articulosFiltrados //imprime los valores menores o iguales a 500
 
-//****\_****METODO 2****\_\_\_****MAPEA LOS ELEMENTOS DE
+//\***\*\_\*\***METODO 2\***\*\_\_\_\*\***MAPEA LOS ELEMENTOS DE
 var nombreArticulos = articulos.map (function(srticulo){
 return articulo.nombre
 });
 nombreArticulos // imprime los nombres de los articulos del objeto
 
-//**\_\_\_\_**METODO 3****\_**** BUSCA ALGO DENTRO DEL ARTICULO
+//**\_\_\_\_**METODO 3\***\*\_\*\*** BUSCA ALGO DENTRO DEL ARTICULO
 var encuentraArticulo = articulos.find(function(articulo){
 return articulo.nombre === "Laptop"
 });
 encuentraArticulos //imprime los elementos y valores del elemento buscado.
 
-//**\_\_\_\_**METODO 4****\_****
+//**\_\_\_\_**METODO 4\***\*\_\*\***
 articulos.forEach(function(articulo){
 console.log(articulo.nombre) //imprime el valor del elemento especificado solamente
 });
 
-//****\_****METODO 5****\_****
+//\***\*\_\*\***METODO 5\***\*\_\*\***
 var articulosBaratos = articulos.some(function(articulo){
 return articulo.costo <=700;
 });
 articulosBaratos //imprime un boleano que afirma si la consicion es verdadera o falsa
 
-//****\_\_****AÑADIR Y ELIMINAR ELEMENTOS DE UN ARRAY****\_****
+//\***\*\_\_\*\***AÑADIR Y ELIMINAR ELEMENTOS DE UN ARRAY\***\*\_\*\***
 //Añadir elementos (Numeros) a un Array
-//****\_\_**** .push() ****\_\_****
+//\***\*\_\_\*\*** .push() \***\*\_\_\*\***
 
 let numArray = [1,2,3,4,5]
 
@@ -296,7 +296,7 @@ console.log(txtArray)//Imprime los elementos viejos y los nuevos
 }
 addCharacters () //Ejecuta la funcion para ejecutar el console.log
 
-//****\_\_**** .shift ****\_\_\_\_**** ELIMINA PRIMER ELEMENTO
+//\***\*\_\_\*\*** .shift \***\*\_\_\_\_\*\*** ELIMINA PRIMER ELEMENTO
 
 let array = [1,2,3,4,5]
 console.log(array) //imprime el array existente
@@ -305,7 +305,7 @@ let shiftArray = array.shift() //Se aplica la eliminacion del primer elemento de
 
 console.log(array)//imprime el nuevo array con el primer elemento borrado
 
-//****\_\_\_\_**** .pop ******\_\_****** ELIMINA EL ULTIMO ELEMENTO
+//\***\*\_\_\_\_\*\*** .pop **\*\***\_\_**\*\*** ELIMINA EL ULTIMO ELEMENTO
 
 let array = [1,2,3,4,5]
 console.log(array) //imprime el array existente
@@ -378,7 +378,7 @@ En su lugar, crea un custom Hook para abstraer la funcionalidad del paquete.
 
 ---
 
----
+## PROPS DRILLING
 
 ---
 
