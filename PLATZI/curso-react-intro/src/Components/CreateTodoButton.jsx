@@ -1,10 +1,10 @@
 import './styles/CreateTodoButton.css';
 
-export const CreateTodoButton = () => {
+export const CreateTodoButton = ({ setOpenModal }) => {
     return (
-        <button 
-        className='CreateTodoButton'
-        onClick={()=>console.log("clickeado")}
+        <button
+            className='CreateTodoButton'
+            onClick={() => setOpenModal(state => !state)}
         >+</button>
     );
 }

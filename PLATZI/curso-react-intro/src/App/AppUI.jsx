@@ -2,6 +2,7 @@ import React from 'react'
 import { CreateTodoButton, TodoSearch, TodoList, TodoItem, TodoCounter,TodosLoading,TodosError,EmptyTodos } from '../Components';
 import { TodoContext } from '../Context/TodoContext';
 import { Modal } from '../Components/Modal/Modal';
+import { TodoForm } from '../Components/TodoForm';
 
 
 export const AppUI = () => {
@@ -35,11 +36,12 @@ export const AppUI = () => {
           />
           ))}
           </TodoList>
-          <CreateTodoButton />
+
+          <CreateTodoButton setOpenModal={setOpenModal}/>
 
           {openModal && (
             <Modal>
-              La funcionalidad de agregar TODOS!
+              <TodoForm />
             </Modal>
           )}
 
